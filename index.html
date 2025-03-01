@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      Character encoding and responsive viewport.
+      These tags are essential for modern web development.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+      Links to your external CSS file.
+      Make sure "style.css" is in the correct relative path.
+    -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Romano Tarsia</title>
+  </head>
+
+  <body>
+    <!-- 
+      NAVIGATION
+      Contains site title and menu links.
+    -->
+    <nav class="nav">
+      <h1 class="nav__title">Romano Tarsia</h1>
+      <ul class="nav-menu">
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="#about">About</a>
+        </li>
+        <li class="nav-menu__item">
+          <a
+            href="/cv/CV_RT_full.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-menu__link"
+          >
+            CV
+          </a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="#research">Research</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="#teaching">Teaching</a>
+        </li>
+        <!-- 
+          "Contact" is text only. 
+          Replace it with a link if you have a dedicated Contact section or page.
+        -->
+        <li class="nav-menu__item">
+          Contact
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 
+      ABOUT SECTION
+      Includes a picture, title, paragraphs, and social links.
+    -->
+    <section class="about" id="about">
+      <div class="about__picture">
+        <img
+          src="/img/mezzobusto.jpeg"
+          alt="Romano Tarsia smiling"
+        />
+      </div>
+
+      <h2 class="about__title fs-1">Romano Tarsia</h2>
+      <p class="about__paragraph">PhD Candidate</p>
+      <p class="about__paragraph">Climate Economics</p>
+      <p class="about__paragraph">London School Economics</p>
+
+      <!-- 
+        Links to external profiles (LinkedIn, Google Scholar).
+        Icons are referenced from "/img/icons/" folder.
+      -->
+      <ul class="about__links">
+        <li class="about__item">
+          <a
+            class="about__link"
+            href="https://www.linkedin.com/in/romano-tarsia-19b403126/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="about__link--logo"
+              src="/img/icons/linkedin.svg"
+              alt="linkedin logo"
+            />
+          </a>
+        </li>
+        <li class="about__item">
+          <a
+            class="about__link"
+            href="https://scholar.google.com/citations?user=g-VrbqgAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="about__link--logo"
+              src="/img/icons/google-scholar.svg"
+              alt="linkedin logo"
+            />
+          </a>
+        </li>
+        <li class="about__item">
+          <a
+            class="about__link"
+            href="https://bsky.app/profile/romantar.bsky.social"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="about__link--logo"
+              src="/img/icons/Bluesky.svg"
+              alt="linkedin logo"
+            />
+          </a>
+        </li>
+      </ul>
+
+      <h2 class="about__sub-title fs-2">About Me</h2>
+      <div class="about__description description">
+        <p>
+          I am a PhD candidate in Environmental Economics at the
+          <a
+            class="about__link"
+            href="https://www.lse.ac.uk" 
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            London School of Economics (LSE) 
+          </a> 
+          working on
+          climate econometrics. I am interested in the estimation of the
+          economic impacts of climate change using microeconometric techniques
+          and large datasets. I hold a BSc in Economics and Business from the
+          University of Bari, an MSc in Economic and Social Sciences (ESS) from
+          Bocconi University and a MSc in Environmental Economics and Climate
+          Change from LSE.
+        </p>
+        <p>
+          I was a trainee at the European Central Bank in the Directorate
+          General Economics, and a research assistant at the Baffi Carefin
+          Centre at Bocconi University. At LSE, I am a graduate teaching assistant
+          for the courses Applied Quantitative Methods (GY428), Applied
+          Environmental Economics (GY222), and the summer school course
+          Environmental Economics and Sustainable Development (EC240).
+        </p>
+      </div>
+    </section>
+
+    <!-- 
+      RESEARCH SECTION
+      Includes Publications, Working Papers, and Work in Progress.
+    -->
+    <section id="research" class="research">
+      <h2 class="research__title fs-2">Research</h2>
+
+      <!-- Publications -->
+      <h3 class="research__sub-title fs-3">Publications</h3>
+      <div class="description">
+        <ul class="research__items">
+          <li>
+            <!-- 
+              Valid link for publication. 
+            -->
+            <a
+              href="https://www.laweconomicsyearlyreview.org.uk/Law_and_Economics_Yearly_Review_LEYR_Journal_vol_10_part_1_2021.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Society, Politicians, Climate Change and Central Banks: An Index
+              of Green Activism
+            </a>,
+            with D. Masciandaro,
+            <i>Law and Economics Yearly Review</i> (2021)
+            <br />
+            Older Working papers:
+            <a
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3927929"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baffi Center
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Working Papers -->
+      <h3 class="research__sub-title fs-3">Working Papers</h3>
+      <div class="description">
+        <ul class="research__items">
+          <li>
+            <!-- 
+              Placeholder anchor with no href. 
+              Preserving text, but note the mismatched <i> was corrected.
+            -->
+            <a>
+              Heterogeneous effects of weather shocks on firm economic performance 
+              <i>(2023)</i>
+              <br />
+            </a>
+            Working papers:
+            <a
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4672552"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SSRN
+            </a>
+            <a
+              href="https://www.lse.ac.uk/granthaminstitute/publication/heterogeneous-effects-of-weather-shocks-on-firm-economic-performance/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LSE GRI
+            </a>
+            <a
+              href="https://eprints.lse.ac.uk/124251/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LSE G&E
+            </a>
+          </li>
+          <li>
+            <!-- 
+              Another placeholder anchor with no href. 
+              Mismatched <i> tag is fixed.
+            -->
+            <a>
+              Beneath the Trees: The Influence of Natural Capital on Shadow Price Dynamics
+              in a Macroeconomic Model with Uncertainty, with G. Benmir, A. Mori,
+              and J. Roman 
+              <i>(2024)</i>
+              <br />
+            </a>
+            Working papers: 
+            <a
+              href="https://www.lse.ac.uk/granthaminstitute/publication/beneath-the-trees-the-influence-of-natural-capital-on-shadow-price-dynamics-in-a-macroeconomic-model-with-uncertainty/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LSE GRI
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Work in Progress -->
+      <h3 class="research__sub-title fs-3">Work in Progress</h3>
+      <div class="description">
+        <ul class="research__items">
+          <li>
+            <!-- 
+              Another placeholder anchor with no href.
+            -->
+            <a>
+              Climate Ripples in Production Networks, with G. Benmir, S. Maso,
+              A. Mori, and J. Roman 
+              <br />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 
+      TEACHING SECTION
+      Lists teaching experiences and course links.
+    -->
+    <section id="teaching" class="teaching">
+      <h2 class="teaching__title fs-2">Teaching</h2>
+
+      <!-- LSE Teaching Experience -->
+      <h3 class="research__sub-title fs-3">London School of Economics</h3>
+      <div class="description">
+        <p>Graduate Teaching Assistant, Dept. of Economics</p>
+        <ul>
+          <li>
+            <!-- 
+              Valid link to the LSE Summer School page.
+            -->
+            <a
+              href="https://www.lse.ac.uk/study-at-lse/summer-schools/summer-school/courses/economics/ec240"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              EC240: Environmental Economics and Sustainable Development
+              (Summer School)
+            </a>
+          </li>
+        </ul>
+
+        <p>Graduate Teaching Assistant, Dept. of Geography and Environment</p>
+        <ul>
+          <li>
+            <!-- 
+              No "target=_blank" or "rel=" here—add them if you want a new tab & better security.
+            -->
+            <a href="https://www.lse.ac.uk/resources/calendar2022-2023/courseGuides/GY/2022_GY222.htm">
+              Applied Environmental Economics (UG)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.lse.ac.uk/resources/calendar2024-2025/courseGuides/GY/2024_GY428.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Applied Quantitative Methods (PG)
+            </a>
+          </li>
+        </ul>
+      </div>
+     <!-- Bocconi Teaching Experience -->
+     <h3 class="research__sub-title fs-3">Bocconi University</h3>
+     <div class="description">
+       <p>Academic Fellow, Dept. of Economics</p>
+       <ul>
+         <li>
+           Macroeconomic Scenarios (PG)
+         </li>
+         <li>
+          Monetary Economics (UG)
+         </li>
+         <li>
+          International Macroeconomics (UG)
+         </li>
+       </ul>
+
+
+    </section>
+  </body>
+</html>
