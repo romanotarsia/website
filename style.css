@@ -61,6 +61,16 @@
   color: inherit;
 }
 
+
+.working-papers a {
+  margin-right: 10px; /* Adds spacing between links */
+  text-decoration: none; /* Keeps links without underlines */
+}
+.working-papers a:last-child {
+  margin-right: 0; /* Ensures no extra space after the last link */
+}
+
+
 /* 
   BURGER BUTTON STYLES 
   - Hidden by default on desktop 
