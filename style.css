@@ -61,7 +61,6 @@
   color: inherit;
 }
 
-
 /* 
   BURGER BUTTON STYLES 
   - Hidden by default on desktop 
@@ -113,6 +112,14 @@ section {
 */
 .about__item:not(:last-child) {
   margin-right: 1rem;
+}
+
+/*
+Remove underline from links
+*/
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* 
