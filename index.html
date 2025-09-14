@@ -22,39 +22,25 @@
       NAVIGATION
       Contains site title and menu links.
     -->
-    <nav class="nav">
-      <h1 class="nav__title">Romano Tarsia</h1>
-      <ul class="nav-menu">
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#about">About</a>
-        </li>
-        <li class="nav-menu__item">
-          <a
-            href="/cv/CV_RT_full.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="nav-menu__link"
-          >
-            CV
-          </a>
-        </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#research">Research</a>
-        </li>
-        <li class="nav-menu__item">
-          <a class="nav-menu__link" href="#teaching">Teaching</a>
-        </li>
-        <!-- 
-          "Contact" is text only. 
-          Replace it with a link if you have a dedicated Contact section or page.
-        -->
-        <!--
-        <li class="nav-menu__item">
-          Contact
-        </li>
-        -->
-      </ul>
-    </nav>
+  <nav class="nav">
+    <h1 class="nav__title">Romano Tarsia</h1>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-menu">
+      <li class="nav-menu__item">
+        <a class="nav-menu__link" href="#about">About</a>
+      </li>
+      <li class="nav-menu__item">
+        <a href="/cv/CV_RT_full.pdf" target="_blank" rel="noopener noreferrer" class="nav-menu__link">CV</a>
+      </li>
+      <li class="nav-menu__item">
+        <a class="nav-menu__link" href="#research">Research</a>
+      </li>
+      <li class="nav-menu__item">
+        <a class="nav-menu__link" href="#teaching">Teaching</a>
+      </li>
+    </ul>
+  </nav>
 
     <!-- 
       ABOUT SECTION
@@ -353,8 +339,15 @@
           International Macroeconomics (UG)
          </li>
        </ul>
-
-
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav-menu__link').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('menu-toggle').checked = false;
+                });
+            });
+        });
+    </script>
   </body>
 </html>
