@@ -39,6 +39,9 @@
       <li class="nav-menu__item">
         <a class="nav-menu__link" href="#teaching">Teaching</a>
       </li>
+       <li class="nav-menu__item">
+        <a class="nav-menu__link" href="/talks.html">Talks</a>
+      </li>
     </ul>
   </nav>
 
@@ -110,7 +113,7 @@
         </li>
       </ul>
 
-      <h2 class="about__sub-title fs-2">About Me</h2>
+      <h2 class="about__sub-title sub-title fs-2">About Me</h2>
       <div class="about__description description">
         <p>
           I am a PhD candidate in Environmental Economics at the
@@ -149,7 +152,7 @@
       <h2 class="research__title fs-2">Research</h2>
 
       <!-- Publications -->
-      <h3 class="research__sub-title fs-3">Publications</h3>
+      <h3 class="research__sub-title sub-title fs-3">Publications</h3>
       <div class="description">
         <ul class="research__items">
           <li>
@@ -180,7 +183,7 @@
       </div>
 
       <!-- Working Papers -->
-      <h3 class="research__sub-title fs-3">Working Papers</h3>
+      <h3 class="research__sub-title sub-title fs-3">Working Papers</h3>
       <div class="description">
         <ul class="research__items">
           <li>
@@ -250,7 +253,7 @@
       </div>
 
       <!-- Work in Progress -->
-      <h3 class="research__sub-title fs-3">Work in Progress</h3>
+      <h3 class="research__sub-title sub-title fs-3">Work in Progress</h3>
       <div class="description">
         <ul class="research__items">
           <li>
@@ -280,7 +283,7 @@
       <h2 class="teaching__title fs-2">Teaching</h2>
 
       <!-- LSE Teaching Experience -->
-      <h3 class="research__sub-title fs-3">London School of Economics</h3>
+      <h3 class="research__sub-title sub-title fs-3">London School of Economics</h3>
       <div class="description">
         <p>Graduate Teaching Assistant, Dept. of Economics</p>
         <ul>
@@ -325,7 +328,7 @@
         </ul>
       </div>
      <!-- Bocconi Teaching Experience -->
-     <h3 class="research__sub-title fs-3">Bocconi University</h3>
+     <h3 class="research__sub-title sub-title fs-3">Bocconi University</h3>
      <div class="description">
        <p>Academic Fellow, Dept. of Economics</p>
        <ul>
@@ -348,6 +351,23 @@
                 });
             });
         });
+
+        function setActiveClass() {
+            const links = document.querySelectorAll('.nav-menu__link');
+            const currentHash = window.location.hash;
+
+            links.forEach(link => {
+                link.classList.remove('nav-menu__link--active'); // Remove active class from all links
+                if (link.getAttribute('href') === currentHash) {
+                    link.classList.add('nav-menu__link--active'); // Add active class to the current link
+                }
+            });
+        }
+
+        // Set active class on page load
+        window.addEventListener('load', setActiveClass);
+        // Set active class on hash change
+        window.addEventListener('hashchange', setActiveClass);
     </script>
   </body>
 </html>
