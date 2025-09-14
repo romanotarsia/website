@@ -49,6 +49,10 @@
   color: inherit;
 }
 
+.nav-menu__link--active {
+  font-weight: bold;
+}
+
 /* Hamburger menu styles */
 .menu-toggle {
   display: none; /* Hide checkbox */
@@ -162,6 +166,12 @@ a {
   margin-bottom: 0;
 }
 
+.talks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* -------------------------------------------
    MEDIA QUERIES FOR RESPONSIVENESS
    -------------------------------------------
@@ -225,7 +235,6 @@ a {
   section {
     width: 100%;
     align-items: flex-start;
-    padding: 1rem;
   }
 
   .description {
@@ -237,7 +246,7 @@ a {
     Adjust the about picture or spacing if needed 
   */
   .about__picture {
-    margin: 0 auto 1rem;
+    margin: 1rem auto;
   }
 
   .about {
