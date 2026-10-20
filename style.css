@@ -1,5 +1,37 @@
-/* 
-  Font size utility classes 
+/*
+  BASE TYPOGRAPHY
+  Charter is built into Macs, iPhones and iPads; the others are fallbacks
+  for Windows/Android. No external font downloads needed.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-padding-top: 5rem; /* menu links don't hide headings under the fixed bar */
+}
+
+body {
+	margin: 0;
+	font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia,
+		serif;
+	font-size: 17px;
+	line-height: 1.6;
+	color: #1f2328;
+	background-color: #fff;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.25;
+}
+
+/*
+  Font size utility classes
 */
 .fs-1 {
 	font-size: 36px;
@@ -32,7 +64,8 @@
 }
 
 .nav__title {
-	margin-left: 0.5rem;
+	margin: 0.6rem 0 0.6rem 1.5rem;
+	font-size: 1.75rem;
 	align-self: center; /* vertically center in nav */
 }
 
@@ -56,6 +89,10 @@
 .nav-menu__link {
 	text-decoration: none;
 	color: inherit;
+}
+
+.nav-menu__link:hover {
+	color: #1a4f9c;
 }
 
 .nav-menu__link--active {
@@ -107,7 +144,11 @@ Remove underline from links
 */
 a {
 	text-decoration: none;
-	color: mediumblue;
+	color: #1a4f9c;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 /* 
@@ -119,7 +160,7 @@ a {
 	height: 200px;
 	border-radius: 50%;
 	overflow: hidden;
-	background-color: blue;
+	background-color: #eee;
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -137,30 +178,73 @@ a {
 .about__links {
 	display: flex;
 	list-style: none;
+	padding: 0;
+	margin: 1.25rem 0 0.5rem;
 }
 .about__link--logo {
-	width: 3rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	opacity: 0.85;
+}
+.about__link:hover .about__link--logo {
+	opacity: 1;
 }
 
-/* 
-  Paragraph spacing 
+/*
+  Paragraph spacing
 */
+.about__title {
+	margin: 1rem 0 0.5rem;
+}
 .about__paragraph {
-	margin: 0.25rem 0;
+	margin: 0.1rem 0;
+	text-align: center;
+}
+.about__jm {
+	margin-top: 0.6rem;
+	font-weight: bold;
 }
 .about__sub-title {
 	margin-bottom: 0;
 }
 
-/* 
-  TEXT DESCRIPTION 
-  - center on larger screens 
+/*
+  TEXT DESCRIPTION
+  Comfortable reading width on large screens, full width on phones.
+  Justified, with automatic hyphenation so narrow phone screens
+  don't get large gaps between words.
 */
 .description {
-	width: 60%;
+	width: 100%;
+	max-width: 46rem;
 	margin: 0 auto;
+	padding: 0 1rem;
 	text-align: justify;
 	text-justify: inter-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+/* Don't hyphenate links (paper titles, course names) */
+.description a {
+	-webkit-hyphens: manual;
+	hyphens: manual;
+}
+
+/* Publications and papers: a little air between entries */
+.research__items li {
+	margin-bottom: 0.9rem;
+}
+
+.abstract {
+	display: block;
+	margin-top: 0.25rem;
+	color: #444;
+}
+
+.award {
+	margin-top: 0.5rem;
+	font-style: italic;
 }
 
 /* 
@@ -181,6 +265,16 @@ a {
 
 .talks {
 	margin-top: 4.2rem;
+	padding: 0 1rem 2rem;
+}
+
+.talks__items {
+	padding-left: 20px;
+}
+
+/* Breathing room at the bottom of the page */
+.teaching {
+	padding-bottom: 3rem;
 }
 
 /* -------------------------------------------
@@ -249,8 +343,9 @@ a {
 	}
 
 	.description {
-		width: 97%;
+		width: 100%;
 		margin: 0 auto;
+		padding: 0 16px;
 	}
 
 	/* 
@@ -275,5 +370,13 @@ a {
 	.research__title,
 	.teaching__title {
 		margin: 0 auto;
+	}
+
+	/* Keep sub-headings centred (and off the screen edge) on phones */
+	.sub-title {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 16px;
+		text-align: center;
 	}
 }
