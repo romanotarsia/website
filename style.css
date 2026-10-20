@@ -211,33 +211,29 @@ a:hover {
 /*
   TEXT DESCRIPTION
   Comfortable reading width on large screens, full width on phones.
-  Left-aligned: justified text leaves big gaps between words on phones.
+  Justified, with automatic hyphenation so narrow phone screens
+  don't get large gaps between words.
 */
 .description {
 	width: 100%;
 	max-width: 46rem;
 	margin: 0 auto;
 	padding: 0 1rem;
-	text-align: left;
+	text-align: justify;
+	text-justify: inter-word;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+/* Don't hyphenate links (paper titles, course names) */
+.description a {
+	-webkit-hyphens: manual;
+	hyphens: manual;
 }
 
 /* Publications and papers: a little air between entries */
 .research__items li {
 	margin-bottom: 0.9rem;
-}
-
-/* Small label, e.g. "Single-authored" */
-.tag {
-	display: inline-block;
-	margin-left: 0.35rem;
-	padding: 0 0.45rem;
-	font-size: 0.8em;
-	line-height: 1.5;
-	border: 1px solid #c9d3e3;
-	border-radius: 999px;
-	color: #3a4a63;
-	background-color: #f3f6fb;
-	white-space: nowrap;
 }
 
 .abstract {
